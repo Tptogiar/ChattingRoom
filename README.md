@@ -106,8 +106,8 @@ ps : 原数据库驱动版本为：（GuaGuaChatting\Code\lib目录下）
 ![image](https://user-images.githubusercontent.com/79641956/119360033-cb071c80-bcdc-11eb-93ac-1bb061cf43dc.png)
 ![image](https://user-images.githubusercontent.com/79641956/119360051-d0646700-bcdc-11eb-8655-8559ac4c134e.png)
 ![image](https://user-images.githubusercontent.com/79641956/119360122-e2460a00-bcdc-11eb-9533-728c6225374d.png)
-![image](https://user-images.githubusercontent.com/79641956/119360124-e2dea080-bcdc-11eb-9ba8-7d62858f8def.png)
-![image](https://user-images.githubusercontent.com/79641956/119360125-e3773700-bcdc-11eb-8dfb-91dcc23aa80f.png)
+![image](https://user-images.githubusercontent.com/79641956/119360520-48cb2800-bcdd-11eb-9bac-4da426d524c3.png)
+![image](https://user-images.githubusercontent.com/79641956/119360531-4b2d8200-bcdd-11eb-9f94-72bf70f128a5.png)
 ![image](https://user-images.githubusercontent.com/79641956/119360214-f7229d80-bcdc-11eb-8ef8-43ecf01bf6ad.png)
 ![image](https://user-images.githubusercontent.com/79641956/119360227-fa1d8e00-bcdc-11eb-9ec5-8a794c1f5a94.png)
 
