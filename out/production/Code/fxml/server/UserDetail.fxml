@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" prefHeight="242.0" prefWidth="520.0" stylesheets="/resources/fxml/server/css/UserDetail.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.controller.UserDetailCtrl">
+   <children>
+      <ImageView fx:id="userPhoto" fitHeight="91.0" fitWidth="98.0" layoutX="17.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="userName" layoutX="246.0" layoutY="16.0" prefHeight="27.0" prefWidth="249.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="userID" layoutX="246.0" layoutY="52.0" prefHeight="27.0" prefWidth="249.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="123.0" layoutY="16.0" text="userName:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="123.0" layoutY="52.0" text="userID:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="117.0" text="description:" />
+      <Label fx:id="description" layoutX="32.0" layoutY="142.0" />
+      <Label layoutX="123.0" layoutY="84.0" text="password:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="userPassword" layoutX="246.0" layoutY="84.0" prefHeight="27.0" prefWidth="249.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="toBlockList" layoutX="136.0" layoutY="205.0" mnemonicParsing="false" onAction="#toBlockListHandle" text="下线并拉黑" />
+      <Button fx:id="forceOffOnline" layoutX="314.0" layoutY="205.0" mnemonicParsing="false" onAction="#forceOffOnlineHandle" text="强制下线" />
+      <Button fx:id="sendTip" layoutX="396.0" layoutY="205.0" mnemonicParsing="false" onAction="#sendTipHandle" text="发送即时提醒" />
+      <Button fx:id="deleteUser" layoutX="39.0" layoutY="205.0" mnemonicParsing="false" onAction="#deleteUserHandle" text="删除该用户" />
+      <Button fx:id="unlockInBlockList" layoutX="232.0" layoutY="205.0" mnemonicParsing="false" onAction="#unlockInBlockListHandle" text="解除拉黑" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guaGuaChatting_Language_File Version="1.0" Author="Tptogiar" LanguageCode="CHN">
+    <tip>
+        <item English_Text="comfirm">确定</item>
+        <item English_Text="connectFailed">服务器链接失败，请关闭后重试</item>
+    </tip>
+</guaGuaChatting_Language_File>

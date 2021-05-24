@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root" prefHeight="106.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.controller.PopupTipCtrl">
+   <children>
+      <TextField fx:id="textField" layoutX="45.0" layoutY="31.0" prefHeight="22.0" prefWidth="210.0" />
+      <Button fx:id="send" layoutX="123.0" layoutY="69.0" mnemonicParsing="false" onAction="#handleButtonClicked" text="发送" />
+   </children>
+</AnchorPane>

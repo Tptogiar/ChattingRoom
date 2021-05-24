@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.ClientChatWinCtrl">
+   <children>
+      <AnchorPane prefHeight="60.0" prefWidth="542.0">
+         <children>
+            <Button fx:id="userName" layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleButtonClick" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="60.0" maxWidth="-Infinity" prefHeight="500.0" prefWidth="542.0" style="-fx-background-color: E9E9E9;">
+         <children>
+            <ScrollPane fx:id="scroll" maxWidth="-Infinity" prefHeight="500.0" prefWidth="542.0" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox fx:id="contain" maxWidth="-Infinity" prefHeight="420.0" prefWidth="264.0" />
+               </content>
+            </ScrollPane>
+         </children></AnchorPane>
+      <AnchorPane layoutY="560.0" prefHeight="140.0" prefWidth="542.0">
+         <children>
+            <AnchorPane prefHeight="40.0" prefWidth="542.0">
+               <children>
+                  <Button fx:id="emoji" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleButtonClick" text="emjio" />
+                  <Button fx:id="file" layoutX="147.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleButtonClick" text="file" />
+                  <Button fx:id="history" layoutX="200.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleButtonClick" text="history" />
+                  <Button fx:id="image" layoutX="80.0" layoutY="9.0" mnemonicParsing="false" text="image" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="40.0" prefHeight="70.0" prefWidth="542.0">
+               <children>
+                  <TextArea fx:id="text" prefHeight="70.0" prefWidth="542.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="110.0" prefHeight="30.0" prefWidth="542.0">
+               <children>
+                  <Button fx:id="send" layoutX="479.0" layoutY="3.0" mnemonicParsing="false" onAction="#handleButtonClick" text="send" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+#root{
+
+}
+
+#root:hover{
+    -fx-background-color: B1B1B1;
+}
+#root:pressed{
+    -fx-background-color: #d6d6d6;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" onMouseClicked="#handleMouseClicked" prefHeight="50.0" prefWidth="470.0" stylesheets="/resources/fxml/server/css/UserCell.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.controller.UserCellCtrl">
+   <children>
+      <Label layoutX="70.0" layoutY="13.0" prefHeight="25.0" text="id:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="id" layoutX="102.0" layoutY="13.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="12.0" text="userName:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="userName" layoutX="274.0" layoutY="12.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="onlineIcon" fitHeight="25.0" fitWidth="25.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="isBlockIcon" fitHeight="25.0" fitWidth="25.0" layoutX="431.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" prefHeight="335.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controller.UserProfileCtrl">
+   <children>
+      <ImageView fitHeight="152.0" fitWidth="152.0" layoutX="19.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="193.0" layoutY="28.0" text="userNmae:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="170.0" text="descripton:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="save" layoutX="237.0" layoutY="298.0" mnemonicParsing="false" onAction="#handldButtonClicked" text="save" />
+      <TextArea fx:id="description" layoutX="33.0" layoutY="203.0" prefHeight="87.0" prefWidth="483.0" />
+      <TextField fx:id="userName" layoutX="304.0" layoutY="28.0" />
+      <PasswordField fx:id="password" layoutX="304.0" layoutY="83.0" />
+      <PasswordField fx:id="newPassword" layoutX="304.0" layoutY="136.0" />
+      <Label layoutX="193.0" layoutY="83.0" text="userNmae:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="173.0" layoutY="136.0" text="passwordAgain:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
