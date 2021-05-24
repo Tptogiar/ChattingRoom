@@ -31,12 +31,12 @@ port=555
 driverClass=com.mysql.jdbc.Driver
 dataBaseUrl=jdbc:mysql://localhost:3306/?characterEncoding=utf-8
 dataBaseUser=root
-dataBasePassword=2528891112
+dataBasePassword=********
 
 dataBaseName=guaguaChatting
 ```
 
-![image-20210523211501159](https://user-images.githubusercontent.com/79641956/119358046-cf323a80-bcda-11eb-8f80-f42c12a9d1e4.png)
+![image](https://user-images.githubusercontent.com/79641956/119363321-428a7b00-bce0-11eb-984f-a40302225e71.png)
 
 ps : 原数据库驱动版本为：（GuaGuaChatting\Code\lib目录下）
 
