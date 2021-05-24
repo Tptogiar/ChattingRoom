@@ -48,9 +48,10 @@ dataBaseName=guaguaChatting
 ps : 原数据库驱动版本为：（GuaGuaChatting\Code\lib目录下）
 
 ![image](https://user-images.githubusercontent.com/79641956/119358199-fd177f00-bcda-11eb-878d-540d03b899fc.png)
+![image](https://user-images.githubusercontent.com/79641956/119360905-ac555580-bcdd-11eb-89e9-1575eeec7af8.png)
+![image](https://user-images.githubusercontent.com/79641956/119360906-ad868280-bcdd-11eb-8d2d-4d14c07c886a.png)
 
-![image](https://user-images.githubusercontent.com/79641956/119358258-07d21400-bcdb-11eb-9835-73ab81390485.png)
-![image](https://user-images.githubusercontent.com/79641956/119358293-0dc7f500-bcdb-11eb-881f-8e12457af84e.png)
+
 
 
 
