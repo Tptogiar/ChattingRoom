@@ -63,6 +63,18 @@ ps : 原数据库驱动版本为：（GuaGuaChatting\Code\lib目录下）
 
 ![image-20210523212557787](https://user-images.githubusercontent.com/79641956/119339151-6db2a180-bcc3-11eb-86df-83f211fbb09a.png)
 
+
+
+
+
+
+
+
+#### 客户端
+
+##### 1.登录注册界面及主界面
+
+
 ![image-20210523212757429](https://user-images.githubusercontent.com/79641956/119339181-773c0980-bcc3-11eb-9370-8aca144e1bde.png)
 ![image-20210523212733939](https://user-images.githubusercontent.com/79641956/119339183-773c0980-bcc3-11eb-83b5-1d88e1f7a8e8.png)
 
@@ -73,15 +85,6 @@ ps : 原数据库驱动版本为：（GuaGuaChatting\Code\lib目录下）
 
 
 ![image-20210523213302692](https://user-images.githubusercontent.com/79641956/119339361-a488b780-bcc3-11eb-87f9-8bc30f74edb1.png)
-
-
-
-
-
-
-#### 客户端
-
-##### 1.登录注册界面
 
 ##### ![image-20210523212733939](C:\Users\逸安\AppData\Roaming\Typora\typora-user-images\image-20210523212733939.png)![image-20210523212757429](C:\Users\逸安\AppData\Roaming\Typora\typora-user-images\image-20210523212757429.png)
 
