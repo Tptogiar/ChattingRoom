@@ -66,11 +66,13 @@ ps : 原数据库驱动版本为：（GuaGuaChatting\Code\lib目录下）
 
 ##### 2.主界面
 
-![image-20210523212557787](C:\Users\逸安\AppData\Roaming\Typora\typora-user-images\image-20210523212557787.png)
+![image](https://user-images.githubusercontent.com/79641956/119358772-87f87980-bcdb-11eb-90d9-2dcc06d67523.png)
 
-![image-20210523213413364](C:\Users\逸安\AppData\Roaming\Typora\typora-user-images\image-20210523213413364.png)
+![image](https://user-images.githubusercontent.com/79641956/119358808-9050b480-bcdb-11eb-9461-d0d86565a8ac.png)
 
-![image-20210523213429269](C:\Users\逸安\AppData\Roaming\Typora\typora-user-images\image-20210523213429269.png)
+![image](https://user-images.githubusercontent.com/79641956/119358829-96469580-bcdb-11eb-967e-349836c6f338.png)
+![image](https://user-images.githubusercontent.com/79641956/119358830-96df2c00-bcdb-11eb-9afe-13a10062410b.png)
+
 
 ![image-20210523214326715](C:\Users\逸安\AppData\Roaming\Typora\typora-user-images\image-20210523214326715.png)
 
