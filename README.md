@@ -79,9 +79,11 @@ ps : 原数据库驱动版本为：（GuaGuaChatting\Code\lib目录下）
 
 ##### 1.登录注册界面
 
-##### ![image-20210523212733939](C:\Users\逸安\AppData\Roaming\Typora\typora-user-images\image-20210523212733939.png)![image-20210523212757429](C:\Users\逸安\AppData\Roaming\Typora\typora-user-images\image-20210523212757429.png)
+![image](https://user-images.githubusercontent.com/79641956/119359543-546a1f00-bcdc-11eb-858a-0748cee7914b.png)
+![image](https://user-images.githubusercontent.com/79641956/119359548-5633e280-bcdc-11eb-8ff6-aa1d20c31fe5.png)
+![image](https://user-images.githubusercontent.com/79641956/119359557-57650f80-bcdc-11eb-8f82-65d8e9085f4c.png)
+![image](https://user-images.githubusercontent.com/79641956/119359561-58963c80-bcdc-11eb-9775-2c67e44eb071.png)
 
-![image-20210523212843599](C:\Users\逸安\AppData\Roaming\Typora\typora-user-images\image-20210523212843599.png)![image-20210523212855582](C:\Users\逸安\AppData\Roaming\Typora\typora-user-images\image-20210523212855582.png)![image-20210523212923919](C:\Users\逸安\AppData\Roaming\Typora\typora-user-images\image-20210523212923919.png)
 
 
 
