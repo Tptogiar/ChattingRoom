@@ -1,6 +1,8 @@
 package server.controller;
 
 import common.Tip;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -35,6 +37,8 @@ public class UserDetailCtrl {
     public Button deleteUser;
     public Button unlockInBlockList;
     private User user;
+    //这里把new写在初始化这里，使得一个userDetail只有一个sendStage界面，
+    //不会有重复的窗口
     private Stage sendStage=new Stage();
     private Stage ownStage;
 
@@ -109,6 +113,12 @@ public class UserDetailCtrl {
             return;
         }
         sendStage.show();
+        sendStage.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                sendStage.close();
+            }
+        });
     }
 
     public void forceOffOnlineHandle(ActionEvent actionEvent) throws IOException {

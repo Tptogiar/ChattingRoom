@@ -34,6 +34,4 @@ create table  if not exists friend(
     friendID int not null ,
     group_name varchar(20)
 );
-
-
-set global max_allowed_packet = 200;
+set global max_allowed_packet = 20000

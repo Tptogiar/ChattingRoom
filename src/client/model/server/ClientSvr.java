@@ -13,6 +13,7 @@ import server.model.entity.User;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -175,5 +176,31 @@ public class ClientSvr {
             }
             return;
         }
+    }
+
+    /**
+     * @Author Tptogiar
+     * @Description 客户端成功连接服务端后执行的步骤
+     * @Date 2021/6/19-1:15
+     * @param socket
+     */
+    public static void connectSucceed(Socket socket) throws IOException {
+        ClientStatus.socket=socket;
+        ClientStatus.init(socket);
+        ClientInterEvent.listenToServer();
+    }
+
+    /**
+     * @Author Tptogiar
+     * @Description 服务器允许连接/当前在线用户较多/服务器繁忙
+     * @Date 2021/6/19-1:31
+     * @param interType
+     */
+    public static void serverResponseForConnection(InterType interType) throws IOException {
+        if(interType.equals(InterType.SERVER_ALLOW_CONNECT)){
+            ClientInterfaceEvent.interfaceLogin();
+            return;
+        }
+        Tip.froceOffline(interType.getTypeName());
     }
 }

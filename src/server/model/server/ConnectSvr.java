@@ -1,13 +1,13 @@
 package server.model.server;
 
+import common.Tip;
+import common.inter.InterType;
 import common.inter.containtype.UserCon;
 import common.inter.Request;
 import common.inter.Response;
-import server.ServerMain;
 import server.model.entity.Connect;
 import server.model.entity.User;
 import server.model.factory.RequestDivFactory;
-import server.model.pool.ThreadPool;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -30,16 +30,15 @@ public class ConnectSvr {
 
 
     public  void addConnect(Socket accept) throws IOException {
-        ThreadPool.addNewTask(new Runnable() {
+        Connect conn=new Connect(accept);
+        InterType submitStatus = SvrStatus.myThreadPool.submit(conn,new Runnable() {
             @Override
             public void run() {
-                Connect conn=null;
                 try {
-                    conn = new Connect(accept);
-                    while (true){
+                    while (true) {
                         //TODO 这里需要处理读到不属于Request内容时不中断监听  不能while简单往外提
-                        Request request = (Request)conn.getObjInStm().readObject();
-                        RequestDivFactory.divideRes(request,conn);
+                        Request request = (Request) conn.getObjInStm().readObject();
+                        RequestDivFactory.divideRes(request, conn);
                     }
                 } catch (IOException e) {
                     /*如果这里的connect抛出异常，就认为是客户端掉线了，
@@ -48,9 +47,14 @@ public class ConnectSvr {
                      * 当然如果该客户端还没登录成功（user和connect还没绑定，User为null）
                      * 就不需要进行掉线处理了，本来就还没上线
                      * */
+
                     User user = conn.getUser();
-                    if("Connection reset".equals(e.getMessage())){
-                        if (user==null){
+                    if ("Connection reset".equals(e.getMessage())) {
+                        if (conn.isAllow()){
+                            //线程池里的worker要除掉一个
+                            SvrStatus.myThreadPool.clientShutdown();
+                        }
+                        if (user == null) {
                             return;
                         }
                         try {
@@ -58,14 +62,25 @@ public class ConnectSvr {
                         } catch (IOException ioException) {
                             ioException.printStackTrace();
                         }
-                    }else{
+
+                    } else {
                         e.printStackTrace();
                     }
-                } catch (ClassNotFoundException e) {
+                }
+                catch (ClassCastException e){
+                    //在这里捕获乱入的Object(非Request类型)，并骚做处理
+                    Tip.info("有非法连接介入");
+                }
+                catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
             }
         });
+
+        //将服务器对于本次连接的响应状况返回给客户端
+        Response response = new Response(submitStatus, null);
+        conn.getObjOutStm().writeObject(response);
+
     }
 
 

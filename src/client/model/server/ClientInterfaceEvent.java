@@ -6,6 +6,8 @@ import common.Tip;
 import common.TipType;
 import common.inter.containtype.MessageCon;
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,7 +22,6 @@ import server.model.entity.User;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,8 +48,21 @@ public class ClientInterfaceEvent {
     public static final int PUBLIC =0;
 
     static Stage fileReceiveStage=null;
-    static Stage userProfielStage =new Stage();
+    static Stage userProfielStage;
 
+
+    static {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    userProfielStage=new Stage();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
 
     /**
      * @Author  Tptogiar
@@ -56,12 +70,42 @@ public class ClientInterfaceEvent {
      * @Date  2021/5/18-20:02
      */
     public static void interfaceLogin() throws IOException {
-        loginStage = new Stage();
-        FXMLLoader clientLoginLoader = new FXMLLoader(ClientMain.class.getResource("../resources/fxml/client/ClientLogin.fxml"));
-        AnchorPane load = (AnchorPane)clientLoginLoader.load();
-        loginStage.setScene(new Scene(load));
-        loginStage.setResizable(false);
-        loginStage.show();
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+
+                    loginStage = new Stage();
+                    FXMLLoader clientLoginLoader = new FXMLLoader(ClientMain.class.getResource("../resources/fxml/client/ClientLogin.fxml"));
+                    AnchorPane load = (AnchorPane)clientLoginLoader.load();
+                    loginStage.setScene(new Scene(load));
+                    loginStage.setResizable(false);
+                    loginStage.show();
+                    loginStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                        @Override
+                        public void handle(WindowEvent event) {
+                            Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
+                            confirm.setTitle("退出？");
+                            confirm.setHeaderText("确认退出？");
+                            Optional<ButtonType> result = confirm.showAndWait();
+                            if (result.get() == ButtonType.OK){
+                                System.exit(0);
+                            } else {
+                                event.consume();
+                            }
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
+
+
+
+
     }
 
     /**
@@ -70,7 +114,7 @@ public class ClientInterfaceEvent {
      * @Date  2021/5/16-0:16
      */
     public static void sendLogin(String id, String password) throws Exception {
-        ClientInterEvent.loginAndWait(id,password);
+        ClientInterEvent.sendLogin(id,password);
     }
 
     /**
@@ -144,7 +188,7 @@ public class ClientInterfaceEvent {
      * @Date  2021/5/18-20:04
      */
     public static void sendRegister(String id, String password) {
-        ClientInterEvent.registerAndWait(id,password);
+        ClientInterEvent.sendRegister(id,password);
     }
 
     /**
@@ -497,6 +541,17 @@ public class ClientInterfaceEvent {
         userProfileCtrl.init(ClientStatus.user);
         userProfielStage.setScene(new Scene(userProfileCtrl.root));
         userProfielStage.show();
+        /**
+         * @Author Tptogiar
+         * @Description 添加焦点监听，失去焦点就把该窗口关闭
+         * @Date 2021/5/26-14:15
+         */
+        userProfielStage.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                userProfielStage.close();
+            }
+        });
     }
 
     /**

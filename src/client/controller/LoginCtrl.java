@@ -47,8 +47,6 @@ public class LoginCtrl implements Initializable {
         }
 
 
-
-
     }
 
 

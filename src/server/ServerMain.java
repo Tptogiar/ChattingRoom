@@ -27,10 +27,11 @@ public class ServerMain extends Application {
     }
     @Override
         public void start(Stage primaryStage) throws Exception{
-        //调试时可以将下面登录验证interfaceLogin()和activateServer()中的loginStage.close()注释，打开activateServer()，
+        primaryStage.close();
+        //调试时可以将下面登录验证interfaceLogin()和SvrEventList类activateServer()中的loginStage.close()注释，打开activateServer()，
         //正常使用则相反
-            SvrEventList.interfaceLogin();
-//            SvrEventList.activateServer();
+//            SvrEventList.interfaceLogin();
+            SvrEventList.activateServer();
         }
 
         public static void main(String[] args) {

@@ -43,7 +43,12 @@ public enum InterType {
     POPUP_TIP("弹窗提醒"),
     FORCE_OFFLINE("抱歉，您已被强制下线"),
     FORCE_OFFLINE_DELETE("抱歉，您的账户已被系统删除"),
-    FORCE_OFFLINE_TO_BLACKLIST("实在抱歉，您已被拉入黑名单");
+    FORCE_OFFLINE_TO_BLACKLIST("实在抱歉，您已被拉入黑名单"),
+
+
+    SERVER_ALLOW_CONNECT("服务器允许连接"),
+    SERVER_ONLINES_BUSY("当前在线用户较多，暂不予登录，请您骚后再试"),
+    SERVER_TASKS_BUSY("服务器繁忙，请您骚后再试");
 
 
 

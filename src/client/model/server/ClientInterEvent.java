@@ -57,16 +57,13 @@ public class ClientInterEvent {
      * @Description 发送登录请求
      * @Date 2021/5/17-23:31
      */
-    public static void loginAndWait(String userName, String password) {
+    public static void sendLogin(String userName, String password) {
         ThreadSvr.executeNewTask(new Runnable() {
             @Override
             public void run() {
                 try {
-
                     Request request = RequestAsmFactory.assembleRes(InterType.LOGIN, userName, password);
                     ClientStatus.curObjOutStm.writeObject(request);
-                    Response response = (Response)ClientStatus.curObjInStm.readObject();
-                    ResponseDivFactory.responseDivide(response);
                 } catch (Exception e) {
                     Tip.froceOffline("连接服务器失败，请关闭后重试");
                 }
@@ -92,7 +89,6 @@ public class ClientInterEvent {
 //                    enquiryOnlineUsersAndwait();
 //                    enquiryContactsAndWait();
 //                    enquiryGroupChats();
-                    ClientInterEvent.listenToServer();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -145,15 +141,13 @@ public class ClientInterEvent {
      * @Description 发送注册请求
      * @Date 2021/5/17-23:31
      */
-    public static void registerAndWait(String userName, String password) {
+    public static void sendRegister(String userName, String password) {
         ThreadSvr.executeNewTask(new Runnable() {
             @Override
             public void run() {
                 try {
                     Request request = RequestAsmFactory.assembleRes(InterType.REGISTER, userName, password);
                     ClientStatus.curObjOutStm.writeObject(request);
-                    Response response = (Response)ClientStatus.curObjInStm.readObject();
-                    ResponseDivFactory.responseDivide(response);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

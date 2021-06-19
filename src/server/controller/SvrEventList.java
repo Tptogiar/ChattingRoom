@@ -80,11 +80,7 @@ public class SvrEventList {
         svrStage.setScene(new Scene(load));
         svrStage.setResizable(false);
         svrStage.show();
-        /**
-         * @Author Tptogiar
-         * @Description 监听窗口关闭
-         * @Date 2021/5/22-15:17
-         */
+        //监听窗口关闭
         svrStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
@@ -99,9 +95,9 @@ public class SvrEventList {
                 }
             }
         });
-        loginStage.close();
+//        loginStage.close();
         ServerCenter.updateAllUserForServer();
-        SvrStatus.listenClientRequest();
+        SvrStatus.listenClientsRequest();
     }
 
 

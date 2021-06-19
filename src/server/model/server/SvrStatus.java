@@ -1,7 +1,7 @@
 package server.model.server;
 
 import server.model.pool.MyDataSource;
-import server.model.pool.ThreadPool;
+import server.model.pool.MyThreadPool;
 import server.model.unit.JDBCUtil;
 
 import java.io.IOException;
@@ -35,6 +35,8 @@ public class SvrStatus {
     public static ServerSocket svrScoket;
 
     public static ConnectSvr connSvr=new ConnectSvr();
+
+    public static MyThreadPool myThreadPool=new MyThreadPool(1,4,10);
 
     static {
         try {
@@ -75,9 +77,9 @@ public class SvrStatus {
      * @Description: 开辟一个线程来监听客户端的连接
      * @Date: 2021/5/15-21:49
      */
-    public static void listenClientRequest(){
+    public static void listenClientsRequest(){
 
-        ThreadPool.addNewTask(new Runnable() {
+        SvrStatus.myThreadPool.submit(null,new Runnable() {
             @Override
             public void run() {
                 try {

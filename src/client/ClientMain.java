@@ -2,6 +2,7 @@ package client;
 
 import client.model.server.ClientInterfaceEvent;
 import client.model.server.ClientStatus;
+import client.model.server.ClientSvr;
 import common.Tip;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -38,10 +39,7 @@ public class ClientMain extends Application {
         public void checkConnection(){
             try {
                 Socket socket = new Socket(ClientStatus.host, ClientStatus.port);
-                ClientStatus.socket=socket;
-                ClientStatus.init(socket);
-                ClientInterfaceEvent.interfaceLogin();
-//                ClientEventList.mainInterfaces();
+                ClientSvr.connectSucceed(socket);
             } catch (IOException e) {
                 Tip.error("服务器链接失败，请关闭后重试");
                 System.exit(0);

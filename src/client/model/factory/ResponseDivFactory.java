@@ -1,6 +1,5 @@
 package client.model.factory;
 
-import client.model.server.ClientStatus;
 import client.model.server.ClientSvr;
 import common.TipType;
 import common.inter.Contain;
@@ -11,7 +10,6 @@ import common.inter.InterType;
 import common.inter.Response;
 import server.model.entity.User;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -68,9 +66,12 @@ public class ResponseDivFactory {
         else if(InterType.CORRECT_INFO.equals(interType)){
             correctUserInfo(contain);
         }
+        else if(InterType.SERVER_ALLOW_CONNECT.equals(interType)
+            || InterType.SERVER_ONLINES_BUSY.equals(interType)
+            || InterType.SERVER_TASKS_BUSY.equals(interType)){
+            serverResponseForConnection(interType);
+        }
     }
-
-
 
 
     /**
@@ -207,5 +208,16 @@ public class ResponseDivFactory {
         ClientSvr.correctUserInfo(correctResult,user);
     }
 
+
+    /**
+     * @Author Tptogiar
+     * @Description 服务器允许连接/当前在线用户较多/服务器繁忙
+     * 为将界面事件与业务逻辑分离，所以不直接调用ClientInterfaceEvent内的函数，而是通过ClientSvr调用
+     * @Date 2021/6/19-1:21
+     * @param interType
+     */
+    private static void serverResponseForConnection(InterType interType) throws IOException {
+        ClientSvr.serverResponseForConnection(interType);
+    }
 
 }

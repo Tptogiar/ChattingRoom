@@ -24,6 +24,9 @@ public class Connect {
     private ObjectOutputStream objOutStm;
     private User user;
     private Socket socket;
+    //记录此connect是否在服务端被允许(即此连接建立是服务端的连接数是不是超限了)
+    private boolean isAllow=true;
+
     /**
      * @Author: Tptogiar
      * @Description: 先objectOutput流再输入流，客户端也是，避免相互等待
@@ -54,5 +57,13 @@ public class Connect {
 
     public Socket getSocket() {
         return socket;
+    }
+
+    public void setAllow(boolean allow) {
+        isAllow = allow;
+    }
+
+    public boolean isAllow() {
+        return isAllow;
     }
 }

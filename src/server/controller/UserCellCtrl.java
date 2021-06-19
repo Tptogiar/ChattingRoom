@@ -1,5 +1,7 @@
 package server.controller;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -29,7 +31,7 @@ public class UserCellCtrl implements Initializable {
     public ImageView onlineIcon;
     public ImageView isBlockIcon;
     private User user;
-    //未来使得多次点击只展示出一个窗口，所以这里将Stage作为属性，并只new一次
+    //为使得多次点击只展示出一个窗口，所以这里将Stage作为属性，并只new一次
     private Stage userDetailStage =new Stage();
 
     @Override
@@ -62,6 +64,14 @@ public class UserCellCtrl implements Initializable {
         userName.setText(userNameText);
         userDetailStage.setResizable(false);
         userDetailStage.setScene(new Scene(SvrEventList.interfaceUserDetail(user,userDetailStage).root) );
+        userDetailStage.focusedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                if(oldValue==true){
+                    userDetailStage.hide();
+                }
+            }
+        });
     }
 
     public void handleMouseClicked(MouseEvent mouseEvent) {
