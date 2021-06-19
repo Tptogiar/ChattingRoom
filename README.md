@@ -74,7 +74,7 @@ ps : 原数据库驱动版本为：（GuaGuaChatting\Code\lib目录下）
 #### 客户端
 
 ##### 1.登录注册界面
-
+![image](https://user-images.githubusercontent.com/79641956/122633977-07783d80-d10e-11eb-9113-d4dbfc62e1fa.png)
 ![image](https://user-images.githubusercontent.com/79641956/119359543-546a1f00-bcdc-11eb-858a-0748cee7914b.png)
 ![image](https://user-images.githubusercontent.com/79641956/119359548-5633e280-bcdc-11eb-8ff6-aa1d20c31fe5.png)
 ![image](https://user-images.githubusercontent.com/79641956/119359557-57650f80-bcdc-11eb-8f82-65d8e9085f4c.png)
@@ -104,7 +104,7 @@ ps : 原数据库驱动版本为：（GuaGuaChatting\Code\lib目录下）
 ![image](https://user-images.githubusercontent.com/79641956/119360531-4b2d8200-bcdd-11eb-9f94-72bf70f128a5.png)
 ![image](https://user-images.githubusercontent.com/79641956/119360214-f7229d80-bcdc-11eb-8ef8-43ecf01bf6ad.png)
 ![image](https://user-images.githubusercontent.com/79641956/119360227-fa1d8e00-bcdc-11eb-9ec5-8a794c1f5a94.png)
-![image](https://user-images.githubusercontent.com/79641956/122633977-07783d80-d10e-11eb-9113-d4dbfc62e1fa.png)
+
 
 
 
