@@ -88,7 +88,7 @@ ps : 原数据库驱动版本为：（GuaGuaChatting\Code\lib目录下）
 
 ##### 2.主界面
 
-![image](https://user-images.githubusercontent.com/79641956/119359895-aad75d80-bcdc-11eb-9464-2d5593c5c5a0.png)
+![image](https://user-images.githubusercontent.com/79641956/122634089-cfbdc580-d10e-11eb-9036-2816743c6725.png)
 ![image](https://user-images.githubusercontent.com/79641956/119359908-aca12100-bcdc-11eb-82f6-ceb8d51333cd.png)
 ![image](https://user-images.githubusercontent.com/79641956/119359912-add24e00-bcdc-11eb-9e6f-108bf23eaadc.png)
 ![image](https://user-images.githubusercontent.com/79641956/119359915-ae6ae480-bcdc-11eb-8f14-660baa1a4938.png)
